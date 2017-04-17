@@ -10,6 +10,21 @@
 
   <body>
   	<%= render 'partials/nav' %>
+
+    <div class="container">
+      <% if notice %>
+        <div class="alert alert-success">
+        <%= notice %>
+        </div>
+      <% end %>
+
+      <% if alert %>
+        <div class="alert alert-warning">
+        <%= alert %>
+        </div>
+      <% end %>
+
+      
     <%= yield %>
   </body>
 </html>
