@@ -1,0 +1,28 @@
+<p>
+  <strong>Name:</strong>
+  <%= @apply.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @apply.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @apply.email %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @apply.comments %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @apply.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_apply_path(@apply) %> |
+<%= link_to 'Back', applies_path %>

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  resources :applies
   resources :cprofiles
   devise_for :companies, controllers: { registrations: 'companies/registrations'}
-  resources :jobs
+  
   resources :profiles
   devise_for :users, controllers: { registrations: 'users/registrations' }
-
+  resources :jobs
   root 'pages#index'
   get 'pages/about'
   get 'pages/contact'
