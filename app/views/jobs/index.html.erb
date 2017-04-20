@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Jobs</h1>
 
@@ -20,9 +19,7 @@
         <td><%= job.description %></td>
         <td><%= job.company %></td>
         <td><%= job.apply %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button type="button" class="btn btn-primary"><%= link_to 'Apply', new_apply_path %></button></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Job', new_job_path %>
+

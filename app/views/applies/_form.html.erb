@@ -1,0 +1,38 @@
+<%= form_for(apply) do |f| %>
+  <% if apply.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apply.errors.count, "error") %> prohibited this apply from being saved:</h2>
+
+      <ul>
+      <% apply.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :phone %>
+    <%= f.number_field :phone %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :comments %>
+    <%= f.text_area :comments %>
+  </div>
+
+
+  <div class="btn btn-primary">
+    <%= f.submit %>
+  </div>
+<% end %>
