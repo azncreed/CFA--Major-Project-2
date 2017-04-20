@@ -1,0 +1,2 @@
+class Cprofile < ApplicationRecord
+end
