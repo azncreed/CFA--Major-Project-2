@@ -1,6 +1,5 @@
 class CprofilesController < ApplicationController
   before_action :set_cprofile, only: [:show, :edit, :update, :destroy]
-  after_action :after_sign_in_path_for
   # GET /cprofiles
   # GET /cprofiles.json
   def index
