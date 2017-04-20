@@ -1,0 +1,18 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @cprofile.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cprofile.description %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @cprofile.skills %>
+</p>
+
+<%= link_to 'Edit', edit_cprofile_path(@cprofile) %> |
+<%= link_to 'Back', cprofiles_path %>
