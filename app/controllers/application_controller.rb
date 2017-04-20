@@ -10,6 +10,15 @@ class ApplicationController < ActionController::Base
   	end
   end
 
+    def after_sign_in_path_for(resource)
+
+    if current_company.sign_in_count > 1
+      company_profiles_path
+    else
+      edit_company_profile_path(current_company.company_profile.id)
+    end
+  end
+
   def create
   @record = Record.new
     
