@@ -1,0 +1,13 @@
+<h1>Company Dashboard</h1>
+
+<ul>
+  <% @applies.each do |apply| %>
+    <li><%= apply.name %></li>
+    <li><%= apply.user_id %></li>
+    <li><%= apply.company_id %></li>
+  <% end %>
+</ul>
+
+
+<% @posts.each do |post| %>
+	<%= apply.image %>
