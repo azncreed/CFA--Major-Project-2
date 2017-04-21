@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+index {
+	background-image: url('quietnight');
+}
 .vertical-center {
 	align-items: center;
 	
@@ -8,5 +12,8 @@
 
 .jumbotron {
 	text-align: center;
-	background-color: #b3cde0
+	background-color: #b3cde0;
+	background-image: url('quietnight.jpg');
+	
+	
 }
