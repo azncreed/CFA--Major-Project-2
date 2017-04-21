@@ -25,7 +25,8 @@
                 <% if user_signed_in? %>
             <li><%= link_to 'Profile Page', profiles_path %></li>
                 <% end %>
-            <li><% if company_signed_in? %>
+                <% if company_signed_in? %>
+
             <li><%= link_to 'Company Dashboard', pages_dashboard_path %><li>
                 <%= link_to 'Profile Page', cprofiles_path %>
               <% end %>

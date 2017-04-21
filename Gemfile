@@ -8,7 +8,7 @@ end
 
 gem 'devise'
 gem 'pundit'
-gem 'mailgun-ruby', '~>1.1.4'
+gem 'mailgun-ruby', '~>1.1.4', require: 'mailgun'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'mailgun-ruby', '~>1.1.4'

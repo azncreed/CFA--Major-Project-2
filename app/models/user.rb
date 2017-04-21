@@ -7,7 +7,7 @@ class User < ApplicationRecord
   after_create :create_profile
 
   has_one :profile
-  has_many :jobs
+  has_many :applies
 
   def create_profile
   	Profile.create(user_id: id)
