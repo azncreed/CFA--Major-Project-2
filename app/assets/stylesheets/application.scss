@@ -1,19 +1,26 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-
-index {
-	background-image: url('quietnight');
+/*======= Home Page ========*/
+.homepage {
+	background-image: url('homepage.jpg');
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:#464646 ;
 }
-.vertical-center {
-	align-items: center;
-	
-}
 
-.jumbotron {
+.jumbotron, .jumbotron h1 {
+	background: transparent;
 	text-align: center;
-	background-color: #b3cde0;
-	background-image: url('quietnight.jpg');
-	
-	
+	padding-top: 80px;
+	color: #fff;
 }
+
+/*========= Navigation Bar =============*/
+.navbar-default {
+	background-color: #ab93f9;
+}
+
+
