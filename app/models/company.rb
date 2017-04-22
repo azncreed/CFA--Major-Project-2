@@ -7,4 +7,9 @@ class Company < ApplicationRecord
   has_many :jobs
   has_one :cprofile
 
+  after_create :create_cprofile
+
+   def create_cprofile
+  	Cprofile.create(company_id: id)
+  end
 end
