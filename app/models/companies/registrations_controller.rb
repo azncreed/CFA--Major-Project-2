@@ -1,7 +1,7 @@
 class Companies::RegistrationsController < Devise::RegistrationsController
   protected
     def after_sign_up_path_for(resource)
-      edit_cprofile_path(resource)
+      new_cprofile_path(resource)
     end
 
 end

@@ -16,7 +16,7 @@
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
-        <td><%= profile.user %></td>
+        <td><%= profile.user.email %></td>
         <td><%= profile.biography %></td>
         <td><%= profile.image %></td>
         <td><%= profile.phone %></td>

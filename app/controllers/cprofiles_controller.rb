@@ -14,6 +14,7 @@ class CprofilesController < ApplicationController
   # GET /cprofiles/new
   def new
     @cprofile = Cprofile.new
+    @cprofile.id = current_company.id
   end
 
   # GET /cprofiles/1/edit
@@ -28,7 +29,7 @@ class CprofilesController < ApplicationController
 
     respond_to do |format|
       if @cprofile.save
-        format.html { redirect_to @cprofile, notice: 'Cprofile was successfully created.' }
+        format.html { redirect_to cprofile(@cprofile.id), notice: 'Cprofile was successfully created.' }
         format.json { render :show, status: :created, location: @cprofile }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class CprofilesController < ApplicationController
   def update
     respond_to do |format|
       if @cprofile.update(cprofile_params)
-        format.html { redirect_to @cprofile, notice: 'Cprofile was successfully updated.' }
+        format.html { redirect_to cprofile_path(@cprofile.id), notice: 'Cprofile was successfully updated.' }
         format.json { render :show, status: :ok, location: @cprofile }
       else
         format.html { render :edit }
@@ -73,11 +74,4 @@ class CprofilesController < ApplicationController
     end
 end
 
-  def after_sign_in_path_for(resource)
-
-    if current_company.sign_in_count > 1
-      profiles_path
-    else
-      edit_profile_path(current_user.cprofile.id)
-    end
-  end
+  

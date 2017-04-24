@@ -23,12 +23,12 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> My Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
                 <% if user_signed_in? %>
-            <li><%= link_to 'Profile Page', profiles_path %></li>
+            <li><%= link_to 'Profile Page', profile_path(current_user.profile) %></li>
                 <% end %>
                 <% if company_signed_in? %>
 
             <li><%= link_to 'Company Dashboard', pages_dashboard_path %><li>
-                <%= link_to 'Profile Page', cprofiles_path %>
+            <li><%= link_to 'Profile Page', cprofiles_path %></li>
               <% end %>
             </li>
             <li><%= link_to 'Edit account', edit_user_registration_path %></li>
