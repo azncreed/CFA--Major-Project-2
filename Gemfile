@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'mailgun-ruby', '~>1.1.4'
 gem 'carrierwave', '~> 1.0'
+gem 'materialize-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'

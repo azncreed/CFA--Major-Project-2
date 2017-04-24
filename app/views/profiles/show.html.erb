@@ -1,23 +1,35 @@
+  <div class="col s12 m7">
+    <h2 class="header">Profile Page</h2>
+       <div class=".col-md-4 .col-md-offset-4">
+		    <div class="card horizontal">
+		      <div class="card-stacked">
+		        <div class="card-content">
+		          <p><strong>Biography</strong></p><br>
+		          <p><%= @profile.biography %></p>
+		        </div>
+		       </div>
+		    </div>  
+		</div>
+  </div>     
+	
+<div class=".col-md-4 .col-md-offset-4">
+   <div class="card horizontal">
+	  <div class="card-stacked">
+		<div class="card-content">
+		  <p><strong>Contact</strong></p><br>
+		     <p><%= @profile.user.email %></p>
+		     <p><%= @profile.phone %></p>
+	    </div>
+	  </div>
+   </div>  
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @profile.user.email %>
-</p>
-
-<p>
-  <strong>Biography:</strong>
-  <%= @profile.biography %>
-</p>
 
 <p>
   <strong>Image:</strong>
-  <%= @profile.image %>
+  <%= image_tag @profile.avatar.url %>
 </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @profile.phone %>
-</p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
