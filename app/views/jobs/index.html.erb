@@ -6,8 +6,6 @@
     <tr>
       <th>Role</th>
       <th>Description</th>
-      <th>Company</th>
-      <th>Apply</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +15,10 @@
       <tr>
         <td><%= job.role %></td>
         <td><%= job.description %></td>
-        <td><%= job.company %></td>
-        <td><%= job.apply %></td>
         <td><button type="button" class="btn btn-primary"><%= link_to 'Apply', new_apply_path %></button></td>
+        <% if company_signed_in? %>
+        <td><button type="button" class="btn btn-primary"><%= link_to 'Delete' %></button></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
