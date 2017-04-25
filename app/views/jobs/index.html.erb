@@ -26,4 +26,8 @@
 
 <br>
 
+<% if company_signed_in? %>
+  <button type="button" class="btn btn-primary"><%= link_to 'New Job Post', new_job_path %></button></td>
+<% end %>
+
 
